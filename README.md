@@ -1,2 +1,2 @@
-# COSC-333-ASSIGNMENT-SORT
-Sorting in data structures
+Name: Maxwel Ong'udi
+Adm_no: EB3/67319/23
