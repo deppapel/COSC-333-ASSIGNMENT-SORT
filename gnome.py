@@ -1,3 +1,4 @@
+# desc
 def gnome_sort(arr):
    
     i = 0
@@ -6,7 +7,7 @@ def gnome_sort(arr):
     while i < n:
         if i == 0:
             i+=1
-        if arr[i] >= arr[i-1]:
+        if arr[i] <= arr[i-1]:
             i+=1
         else:
             arr[i], arr[i-1] = arr[i-1], arr[i]       
