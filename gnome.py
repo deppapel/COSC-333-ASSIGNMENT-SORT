@@ -16,8 +16,9 @@ def gnome_sort(arr):
             swaps += 1      
             i-= 1   
     return comp, swaps
-       
-lists = [15, 19, 43, 26, 37]
+
+numbers_input = input("Enter integers separated by spaces: ")
+lists = list(map(int, numbers_input.split()))
 comp, swaps =gnome_sort(lists)
 
 print("sorted is :", lists)
