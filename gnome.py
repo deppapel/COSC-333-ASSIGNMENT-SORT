@@ -1,4 +1,5 @@
-# desc
+import random
+
 def gnome_sort(arr):
     comp = 0
     swaps = 0
@@ -7,21 +8,23 @@ def gnome_sort(arr):
 
     while i < n:
         if i == 0:
-            i+=1
-        else:    
-            comp += 1
+            i += 1
+            continue      
+        comp += 1
         if arr[i] <= arr[i-1]:
-            i+=1
+            i += 1
         else:
-            arr[i], arr[i-1] = arr[i-1], arr[i] 
-            swaps += 1      
-            i-= 1   
+            arr[i], arr[i-1] = arr[i-1], arr[i]
+            swaps += 1
+            i -= 1
     return comp, swaps
 
-numbers_input = input("Enter integers separated by spaces: ")
-lists = list(map(int, numbers_input.split()))
-comp, swaps =gnome_sort(lists)
+def random_list(size, min_val=0, max_val=10**6):
+    return [random.randint(min_val, max_val) for _ in range(size)]
 
-print("sorted is :", lists)
-print("comparisons are:", comp)
-print("swaps are :", swaps)
+sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999]
+print("Size\tComparisons\tSwaps")
+for size in sizes:
+    arr = random_list(size)
+    comp, swaps = gnome_sort(arr)
+    print(f"{size}\t{comp}\t\t{swaps}")
