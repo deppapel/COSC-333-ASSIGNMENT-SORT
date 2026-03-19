@@ -27,7 +27,7 @@ def random_list(size, min_val=0, max_val=10**6):
 
 
 sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999]
-print("Size\tComparisons\tSwaps")
+print("Size\tOriginal (first 5)\tSorted (first 5)\tComparisons\tSwaps")
 for size in sizes:
     arr = random_list(size)
     original = arr.copy()
@@ -36,4 +36,4 @@ for size in sizes:
     orig_preview = str(original[:5])[:-1] + ",...]" if size > 5 else str(original)
     sort_preview = str(arr[:5])[:-1] + ",...]" if size > 5 else str(arr)
 
-    print(f"{size}\t{orig_preview}\t{sort_preview}\t{comp}\t\t{swaps}")
+    print(f"{size}\t{orig_preview}\t{sort_preview}\t{comp}\t{swaps}")
