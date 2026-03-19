@@ -8,6 +8,7 @@ def gnome_sort(arr):
     while i < n:
         if i == 0:
             i+=1
+        else:    
             comp += 1
         if arr[i] <= arr[i-1]:
             i+=1
