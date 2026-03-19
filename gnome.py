@@ -24,12 +24,7 @@ def gnome_sort(arr, verbose=False):
 def random_list(size, min_val=0, max_val=10**6):
     return [random.randint(min_val, max_val) for _ in range(size)]
 
-print("Testing Gnome Sort with random lists:")
-example = [5, 3, 2, 4, 1] 
-print("Original:", example)
-comp, swaps = gnome_sort(example)
-print("Sorted:", example)
-print(f"Comparisons: {comp}, Swaps: {swaps}\n")
+
 
 sizes = [1, 2, 3, 4, 5, 10, 250, 999, 9999]
 print("Size\tComparisons\tSwaps")
